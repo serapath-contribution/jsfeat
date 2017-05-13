@@ -9,9 +9,9 @@
         <title>JSFeat - JavaScript Computer Vision Library.</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|Inconsolata|PT+Sans:400,700">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/jsfeat.css">
-        <link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="demo/css/bootstrap.css">
+        <link rel="stylesheet" href="demo/css/jsfeat.css">
+        <link rel="stylesheet" href="demo/css/page.css">
 
         <script type="text/javascript">
           var _gaq = _gaq || [];
@@ -306,8 +306,8 @@ jsfeat.linalg.eigenVV(A:matrix_t, EigenVectors:matrix_t, null);
                     <section id="multiview">
                         <h2>Multiview</h2>
                         <p>The functions in this module estimate various geometrical transformations between two point sets.</p>
-                        <p><a href="sample_videostab.html" target="_blank" role="button" class="btn btn-mini">VIDEO STABILIZER DEMO</a>
-                        <a href="sample_orb.html" target="_blank" role="button" class="btn btn-mini">ORB MATCHING DEMO</a></p>
+                        <p><a href="demo/sample_videostab.html" target="_blank" role="button" class="btn btn-mini">VIDEO STABILIZER DEMO</a>
+                        <a href="demo/sample_orb.html" target="_blank" role="button" class="btn btn-mini">ORB MATCHING DEMO</a></p>
                         <h4>affine2d</h4>
                         <p>This kernel calculates the affine transform from corresponding points. The function calculates the <code>3x3 Matrix</code></p>
 <pre class="prettyprint linenums">
@@ -430,7 +430,7 @@ var ok = lmeds(params, affine_kernel, from, to, count, transform, mask, max_iter
                         <p><code>jsfeat.imgpoc</code> module is like library heart! It contains all kind of methods to pre/post process and analyze image data.</p>
                         <h4>grayscale</h4>
                         <p>Convert color array input <code>[r0,g0,b0,a0, ...]</code> to grayscale using <code>Y = 0.299*R + 0.587*G + 0.114*B</code> formula. You can specify the source input channel order such as BGRA, RGBA, RGB and BGR.</p>
-                        <p><a href="sample_grayscale.html" target="_blank" role="button" class="btn btn-mini">GRAYSCALE DEMO</a></p>
+                        <p><a href="demo/sample_grayscale.html" target="_blank" role="button" class="btn btn-mini">GRAYSCALE DEMO</a></p>
 <pre class="prettyprint linenums">
 context2d.drawImage(video, 0, 0, width, height);
 var image_data = context2d.getImageData(0, 0, width, height);
@@ -446,7 +446,7 @@ jsfeat.imgproc.resample(source:matrix_t, dest:matrix_t, new_width, new_height);
 </pre>
                         <h4>box_blur_gray</h4>
                         <p>Works with single channel data only. <span class="label label-important">NOTE:</span> if input is <code>jsfeat.U8_t</code> and <code>options = jsfeat.BOX_BLUR_NOSCALE</code> dest should be at least <code>jsfeat.S32_t</code> to handle accumulated values correctly.</p>
-                        <p><a href="sample_boxblur.html" target="_blank" role="button" class="btn btn-mini">BOX BLUR DEMO</a></p>
+                        <p><a href="demo/sample_boxblur.html" target="_blank" role="button" class="btn btn-mini">BOX BLUR DEMO</a></p>
 <pre class="prettyprint linenums">
 /*
 options   - you can pass jsfeat.BOX_BLUR_NOSCALE
@@ -457,27 +457,27 @@ jsfeat.imgproc.box_blur_gray(source:matrix_t, dest:matrix_t, radius, options = 0
 </pre>
                         <h4>gaussian_blur</h4>
                         <p>Works with single channel data only. You can choose between providing <code>kernel_size</code> or <code>sigma</code> argument or both.</p>
-                        <p><a href="sample_gaussblur.html" target="_blank" role="button" class="btn btn-mini">GAUSSIAN BLUR DEMO</a></p>
+                        <p><a href="demo/sample_gaussblur.html" target="_blank" role="button" class="btn btn-mini">GAUSSIAN BLUR DEMO</a></p>
 <pre class="prettyprint linenums">
 jsfeat.imgproc.gaussian_blur(source:matrix_t, dest:matrix_t, kernel_size, sigma = 0);
 </pre>
                         <h4>pyrdown</h4>
                         <p>Downsample <code>source</code> to <code>dest</code> writing simple 4 pix average value. Works with single channel only.</p>
-                        <p><a href="sample_pyrdown.html" target="_blank" role="button" class="btn btn-mini">PYRDOWN DEMO</a></p>
+                        <p><a href="demo/sample_pyrdown.html" target="_blank" role="button" class="btn btn-mini">PYRDOWN DEMO</a></p>
 <pre class="prettyprint linenums">
 jsfeat.imgproc.pyrdown(source:matrix_t, dest:matrix_t);
 </pre>
                         <h4>scharr_derivatives</h4>
                         <p>Compute gradient using Scharr kernel <code>[3 10 3] * [-1 0 1]^T</code>. Works with single channel only.</p>
-                        <p><a href="sample_scharr.html" target="_blank" role="button" class="btn btn-mini">SCHARR DEMO</a></p>
+                        <p><a href="demo/sample_scharr.html" target="_blank" role="button" class="btn btn-mini">SCHARR DEMO</a></p>
 <pre class="prettyprint linenums">
 // result is written as [gx0,gy0,gx1,gy1, ...] sequence in 2 channel matrix_t
 jsfeat.imgproc.scharr_derivatives(source:matrix_t, dest:matrix_t);
 </pre>
                         <h4>sobel_derivatives</h4>
                         <p>Compute gradient using Sobel kernel <code>[1 2 1] * [-1 0 1]^T</code>. Works with single channel only.</p>
-                        <p><a href="sample_sobel.html" target="_blank" role="button" class="btn btn-mini">SOBEL DEMO</a>
-                            <a href="sample_sobel_edge.html" target="_blank" role="button" class="btn btn-mini">SOBEL EDGES DEMO</a></p>
+                        <p><a href="demo/sample_sobel.html" target="_blank" role="button" class="btn btn-mini">SOBEL DEMO</a>
+                            <a href="demo/sample_sobel_edge.html" target="_blank" role="button" class="btn btn-mini">SOBEL EDGES DEMO</a></p>
 <pre class="prettyprint linenums">
 // result is written as [gx0,gy0,gx1,gy1, ...] sequence in 2 channel matrix_t
 jsfeat.imgproc.sobel_derivatives(source:matrix_t, dest:matrix_t);
@@ -490,7 +490,7 @@ jsfeat.imgproc.compute_integral_image(source:matrix_t,
 </pre>
                         <h4>equalize_histogram</h4>
                         <p>Equalizes the histogram of a grayscale image. The algorithm normalizes the brightness and increases the contrast of the image.</p>
-                        <p><a href="sample_equalize_hist.html" target="_blank" role="button" class="btn btn-mini">EQUALIZE HISTOGRAM DEMO</a></p>
+                        <p><a href="demo/sample_equalize_hist.html" target="_blank" role="button" class="btn btn-mini">EQUALIZE HISTOGRAM DEMO</a></p>
 <pre class="prettyprint linenums">
 jsfeat.imgproc.equalize_histogram(source:matrix_t, dest:matrix_t);
 </pre>
@@ -511,7 +511,7 @@ jsfeat.imgproc.warp_perspective(source:matrix_t, dest:matrix_t,
                         <h4>warp_affine</h4>
                         <p>Applies an affine transformation to an image using <code>2x3 or 3x3 Matrix</code>. Single channel source only.</p>
                         <p>To avoid sampling artifacts, the mapping is done in the reverse order, from destination to the source. That is, for each pixel  of the destination image, the functions compute coordinates of the corresponding “donor” pixel in the source image and copy the pixel value.</p>
-                        <p><a href="sample_warp_affine.html" target="_blank" role="button" class="btn btn-mini">WARP AFFINE DEMO</a></p>
+                        <p><a href="demo/sample_warp_affine.html" target="_blank" role="button" class="btn btn-mini">WARP AFFINE DEMO</a></p>
 <pre class="prettyprint linenums">
 jsfeat.imgproc.warp_affine(source:matrix_t, dest:matrix_t,
                            warp_mat:matrix_t, fill_value = 0);
@@ -522,7 +522,7 @@ jsfeat.imgproc.warp_affine(source:matrix_t, dest:matrix_t,
                         <p>Feature Detection and Description</p>
                         <h4>Fast corners</h4>
                         <p>Detects corners using the <code>FAST</code> algorithm.</p>
-                        <p><a href="sample_fast_corners.html" target="_blank" role="button" class="btn btn-mini">FAST CORNERS DEMO</a></p>
+                        <p><a href="demo/sample_fast_corners.html" target="_blank" role="button" class="btn btn-mini">FAST CORNERS DEMO</a></p>
 <pre class="prettyprint linenums">
 // threshold on difference between intensity of the central pixel
 // and pixels of a circle around this pixel
@@ -542,7 +542,7 @@ var count = jsfeat.fast_corners.detect(img:matrix_t, corners:Array, border = 3);
 </pre>
                         <h4>YAPE06</h4>
                         <p>Laplacian and min eigen value based feature detector by CVLab (Ecole Polytechnique Federale de Lausanne (EPFL), Switzerland).</p>
-                        <p><a href="sample_yape06.html" target="_blank" role="button" class="btn btn-mini">YAPE06 DEMO</a></p>
+                        <p><a href="demo/sample_yape06.html" target="_blank" role="button" class="btn btn-mini">YAPE06 DEMO</a></p>
 <pre class="prettyprint linenums">
 var corners = [],
     laplacian_threshold = 30,
@@ -563,7 +563,7 @@ var count = jsfeat.yape06.detect(img:matrix_t, corners:Array, border = 5);
 </pre>
                         <h4>YAPE</h4>
                         <p>Yet Another Point Extractor by CVLab (Ecole Polytechnique Federale de Lausanne (EPFL), Switzerland).</p>
-                        <p><a href="sample_yape.html" target="_blank" role="button" class="btn btn-mini">YAPE DEMO</a></p>
+                        <p><a href="demo/sample_yape.html" target="_blank" role="button" class="btn btn-mini">YAPE DEMO</a></p>
 <pre class="prettyprint linenums">
 var corners = [],
     image_width = img.cols, image_height = img.rows,
@@ -583,7 +583,7 @@ var count = jsfeat.yape.detect(img:matrix_t, corners:Array, border = 4);
 </pre>
                         <h4>ORB Descriptor</h4>
                         <p>Oriented and Rotated BRIEF. [for more info see: <a href="http://en.wikipedia.org/wiki/ORB_(feature_descriptor)" target="_blank">http://en.wikipedia.org/wiki/ORB_(feature_descriptor)</a>]</p>
-                        <p><a href="sample_orb.html" target="_blank" role="button" class="btn btn-mini">ORB MATCHING DEMO</a></p>
+                        <p><a href="demo/sample_orb.html" target="_blank" role="button" class="btn btn-mini">ORB MATCHING DEMO</a></p>
 <pre class="prettyprint linenums">
 var corners = []; // jsfeat.keypoint_t Array
 
@@ -597,7 +597,7 @@ jsfeat.orb.describe(img_u8:matrix_t, corners:Array, num_corners, descriptors:mat
                     <section id="opticalflowlk">
                         <h2>Lukas Kanade optical flow</h2>
                         <p>Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids.</p>
-                        <p><a href="sample_oflow_lk.html" target="_blank" role="button" class="btn btn-mini">OPTICAL FLOW LK DEMO</a></p>
+                        <p><a href="demo/sample_oflow_lk.html" target="_blank" role="button" class="btn btn-mini">OPTICAL FLOW LK DEMO</a></p>
 <pre class="prettyprint linenums">
 /*
 prev_pyr            - previous frame 8-bit pyramid_t
@@ -626,7 +626,7 @@ jsfeat.optical_flow_lk.track(prev_pyr:pyramid_t, curr_pyr:pyramid_t,
                     <section id="haar">
                         <h2>HAAR Cascades object detector</h2>
                         <p>The object detector initially proposed by Paul Viola and improved by Rainer Lienhart.</p>
-                        <p><a href="sample_haar_face.html" target="_blank" role="button" class="btn btn-mini">HAAR FACE DETECT DEMO</a></p>
+                        <p><a href="demo/sample_haar_face.html" target="_blank" role="button" class="btn btn-mini">HAAR FACE DETECT DEMO</a></p>
 <pre class="prettyprint linenums">
 /*
 Evaluates a Haar cascade classifier at a specified scale
@@ -685,7 +685,7 @@ var rects:Array = jsfeat.haar.group_rectangles(rects:Array, min_neighbors = 1);
                     <section id="bbf">
                         <h2>Brightness Binary Feature object detector</h2>
                         <p>The original paper refers to: YEF∗ Real-Time Object Detection, Yotam Abramson and Bruno Steux.</p>
-                        <p><a href="sample_bbf_face.html" target="_blank" role="button" class="btn btn-mini">BBF FACE DETECT DEMO</a></p>
+                        <p><a href="demo/sample_bbf_face.html" target="_blank" role="button" class="btn btn-mini">BBF FACE DETECT DEMO</a></p>
 <pre class="prettyprint linenums">
 /*
 This step needed only once to create
